@@ -7,14 +7,14 @@
   
   body{
     background-color: #fafafa;
-    font-family: "poppins light";
+    font-family: "poppins light", sans-serif;
   }
   
   header{
     padding: 40px;
     background-color: #000000;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   main{
@@ -67,6 +67,7 @@
   
   table{
     border-collapse: collapse;
+    background-color: #ffffff;
   }
   
   thead{
