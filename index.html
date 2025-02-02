@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css" type="text/css">
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <title>HTML & CSS Tricks</title>
+  </head>
+  <body>
+    <header>
+      <h1>Code Academy Takeaways</h1>
+    </header>
+    <main>
+      <section id="defaultCSS">
+        <h2>Resetting Browser Default CSS</h2>
+        <p>I learned a neat way to reset browser default rules, particularly <code>box-sizing</code>, which makes specified widths include (or not include) padding and borders.</p>
+        <p>The width and height of each of the boxes below has been set to 200px. Each has padding of 20px and border of 2px.</p>
+        <h3>Content Box</h3>
+        <p>For content-box sizing, width is applied only to the content of the element, so to get the elements true rendered width we need to add 200px content width to 20px left padding and 20px right padding plus 2px left border and 2px right border. That means the actual rendered width of my element is 244px! The same applies to height.</p>
+        <p>There's a cool preset stylesheet at <a href="https://meyerweb.com/eric/tools/css/reset/" target="_blank">https://meyerweb.com/eric/tools/css/reset/</a> but beware! It really does reset everything! I took out the <code>&lt;code&gt;</code> tags because it was too much hassle to rewrite them!</p>
+        <div id="contentBoxSizing" class="boxSizingDemo"></div>
+        <h3>Border Box</h3>
+        <p>For this box, border-box sizing is applied, which means width and height apply to everything right up to the border. That's going to make it much easier to position elements on the page.</p>
+        <div id="borderBoxSizing" class="boxSizingDemo"></div>
+        <p></p>
+      </section>
+      <section id="fontFace">
+        <h2>Using Font Face</h2>
+        <p>I've use @font-face before but I'm not entirely confident with it, so I'll put Poppins in here as the default (because it has normal lower-case a's!).</p>
+      </section>
+      <section id="divitis">
+        <h2>Semantic HTML and avoiding 'Divitis'</h2>
+        <p>This is about making proper use of the named tags that were launched with HTML5 rather than using 'div' for everything as I usually do! Apparently it's great for SEO. They want a table with tags, so here goes with those I can remember!</p>
+        <table>
+          <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td>Header</td>
+                <td>The great thing about these semantic tags if they're pretty self-explanatory. This is where your header stuff goes. I think whether you include your nav in this bit is a judgement call</td>
+            </tr>
+            <tr>
+                <td><code>&lt;nav&gt;</code></td>
+                <td>Navbar</td>
+                <td>Usually containing an unordered list of your menu items</td>
+            </tr>
+            <tr>
+                <td><code>&lt;main&gt;</code></td>
+                <td>Main Content</td>
+                <td>The bit that has all your main content in. Probably with a container class if you were doing oldschool bootstrap</td>
+            </tr>
+            <tr>
+                <td><code>&lt;section&gt;</code></td>
+                <td>Section</td>
+                <td>Marks off specific parts of your content</td>
+            </tr>
+            <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Article</td>
+                <td>Usually writing and an image about one specific thing. Not too sure how this is different from section. I suppose it should be more informative?</td>
+            </tr>
+            <tr>
+                <td><code>&lt;figure&gt;</code></td>
+                <td>Figure</td>
+                <td>UFor media bits like images. There's also a figcaption tag that makes image captions nice and neat and is apparently great for readers. It's like a visible alt tag.</td>
+            </tr>
+            <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Footer</td>
+                <td>UThe bottom bit. Usually appears on every page.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section id="specifity">
+        <h2>CSS Specifity</h2>
+        <p>Well, who knew?! Apparently, CSS doesn't just read down the stylesheet. It actually takes the value of the most specific css rule.</p>
+        <p>As an example, <span id="blueText">this text has a span id of blueText</span>. I have added rules below the id to style the font colour to green, but above it in the stylesheet is a rule for the id to be blue.</p>
+        <p>I have also given each section an ID. This section has the id 'specifity'. The css rules are:</p>
+        <code>
+          #specifity h2{
+            color: red;
+          }
+      
+          h2{
+            color: brown;
+          }
+        </code>
+        <p>As you can see, though the h2 rule comes after the section id rule, the section id rule wins because it is more specific than the h2 rule.</p>
+      </section>
+        <section id="marginLanguage">
+        <h2>Code Academy Margin Language</h2>
+        <p>Just one that keeps tripping me up... Code Academy like to use the language 'Vertical Margins' and 'Horizontal Margins' and I keep getting confused about which applies to top/bottom and which applies to left/right.</p>
+        <p>Vertical margins are top/bottom because the value of the margin applies to the vertical gap between two elements.</p>
+        <p>Horizontal margin refers to the left/right margin because it defines how close an element on the same line is.</p>
+        <p>Apparently I have to use a table somewhere so here it is:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Margin Name</th>
+              <th>Description</th>
+              <th>Collapsable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Top</td>
+              <td>Vertical</td>
+              <td>This value will overwrite the bottom margin of the element above if the value is larger, or will be asborbed into the bottom margin if it is smaller.</td>
+            </tr>
+            <tr>
+              <td>Right</td>
+              <td>Horizontal</td>
+              <td>Nope, not at all</td>
+            </tr>
+            <tr>
+              <td>Bottom</td>
+              <td>Veritical</td>
+              <td>Yes, this margin merges with the top margin of the element below it.</td>
+            </tr>
+            <tr>
+              <td>Left</td>
+              <td>Horizontal</td>
+              <td>Nope, not at all</td>
+            </tr>
+          </tbody>
+        </table>
+      </section> 
+    </main> 
+    <footer>
+      <span id="thanks">Thank you! Copyright&#169; Faye Brockbank 2025</span>
+    </footer>
+  </body>
+</html>

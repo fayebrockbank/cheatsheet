@@ -1,0 +1,119 @@
+@font-face{
+    font-family: "poppins light";
+    src: url('fonts/Poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  body{
+    background-color: #fafafa;
+    font-family: "poppins light";
+  }
+  
+  header{
+    padding: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  main{
+    text-align: justify;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  
+  h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  h1{
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  h2{
+    font-size: 18px;
+  }
+  
+  h3{
+    font-size: 14px;
+  }
+  
+  p{
+    margin-bottom: 15px;
+    line-height: 2;
+  }
+  
+  section{
+    margin-bottom: 30px;
+  }
+  
+  code{
+    background-color: #f2f2f2;
+    border: 0.5px solid black;
+    border-radius: 2px;
+    padding: 2px;
+  }
+  
+  #blueText{
+    color: blue;
+  }
+  
+  span{
+    color: green;
+  }
+  
+  table{
+    border-collapse: collapse;
+  }
+  
+  thead{
+    background-color: rgb(5, 16, 62);
+    color: #ffffff;
+  }
+  
+  th, td{
+    border: 1px solid black;
+    margin: 0;
+    padding: 7px;
+  }
+  
+  #specifity h2{
+    color: red;
+  }
+  
+  h2{
+    color: brown;
+  }
+  
+  .boxSizingDemo{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    background-color: green;
+  }
+  
+  #borderBoxSizing{
+    box-sizing: border-box;
+  }
+  
+  #contentBoxSizing{
+    box-sizing: content-box;
+  }
+
+  #thanks{
+    color: #ffffff;
+  }
+  
+  footer{
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
