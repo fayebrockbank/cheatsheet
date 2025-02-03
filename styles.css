@@ -64,6 +64,11 @@
   span{
     color: green;
   }
+
+  .bold{
+    font-weight: 700;
+    color: #000000;
+  }
   
   table{
     border-collapse: collapse;
